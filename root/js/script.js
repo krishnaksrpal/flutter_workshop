@@ -1,7 +1,7 @@
 let postForm = makeAform();
 getNewPosts();
 function getNewPosts() {
-    fetch("http://localhost:3000/post/10", {
+    fetch("https://krishnaksrpal.glitch.me/post/10", {
         method: "get"
         // body: {"title":"post","desc":"my post desc"}
     }).then(
@@ -79,7 +79,7 @@ myHeaders.append('Content-Type', 'application/json');
 postForm.onsubmit = (e)=>{
     // e.preventDefault();
     console.log(postForm.children);
-    fetch("http://localhost:3000/post/new", {
+    fetch("https://krishnaksrpal.glitch.me/post/new", {
         method: "post",
         headers: myHeaders,
         body: JSON.stringify({"title":postForm.children[0].value,"desc":postForm.children[2].value})
